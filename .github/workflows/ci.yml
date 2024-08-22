@@ -2,7 +2,7 @@ name: CI
 on: [pull_request]
 
 jobs:
-    build:
+    Run_Tests_On_Ubuntu:
       name: Run PowerShell Tests on Ubuntu
       runs-on: ubuntu-latest
       steps:
@@ -10,7 +10,7 @@ jobs:
         - name: Script
           run: ./runtests.ps1
           shell: pwsh
-    build:
+    Run_Tests_On_Windows:
       name: Run PowerShell Tests on Windows
       runs-on: windows-latest
       steps:
