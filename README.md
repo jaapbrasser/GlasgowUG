@@ -1,0 +1,2 @@
+# SummerRetreatRiga
+PowerShell Pipelines Example
