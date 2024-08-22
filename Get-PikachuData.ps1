@@ -23,7 +23,7 @@ function Get-PikachuData {
             throw "Server error occurred: $($_.Exception.Message)"
         } else {
             # General error handling
-            throw "An error occurred: $($_.Exception.Message)"
+            throw "An error occurred: $($_.Exception.Message)" 
         }
     }
 }
