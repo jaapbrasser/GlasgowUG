@@ -1,12 +1,20 @@
 name: CI
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
     build:
-      name: Run Script
+      name: Run PowerShell Tests on Ubuntu
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v1
+        - uses: actions/checkout@v4
+        - name: Script
+          run: ./runtests.ps1
+          shell: pwsh
+    build:
+      name: Run PowerShell Tests on Windows
+      runs-on: windows-latest
+      steps:
+        - uses: actions/checkout@v4
         - name: Script
           run: ./runtests.ps1
           shell: pwsh
